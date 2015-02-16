@@ -5,6 +5,6 @@ class Tweet
 
   property :message
 
-  has_many :out, :mentions, type: :mentions, class_name: 'User'
+  has_many :out, :mentions, type: :mentions, model_class: 'User'
   has_one :in, :user, type: :wrote
 end

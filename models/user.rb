@@ -6,7 +6,7 @@ class User
   property :name
 
   has_many :in, :tweets, type: :wrote
-  has_many :in, :mentions, type: :mentions, class_name: 'Tweet'
+  has_many :in, :mentions, type: :mentions, model_class: 'Tweet'
 
   def self.find_or_create(name)
     find_by(name: name) || create(name: name)

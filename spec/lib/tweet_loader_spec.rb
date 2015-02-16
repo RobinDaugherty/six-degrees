@@ -62,8 +62,8 @@ describe TweetLoader do
         expect(subject.mentions.count).to eq(2)
       end
       it 'are User objects' do
-        expect(subject.mentions[0].name).to be_an_instance_of(User)
-        expect(subject.mentions[1].name).to be_an_instance_of(User)
+        expect(subject.mentions[0]).to be_an_instance_of(User)
+        expect(subject.mentions[1]).to be_an_instance_of(User)
       end
       it 'have the correct name' do
         expect(subject.mentions[0].name).to eq('b234')

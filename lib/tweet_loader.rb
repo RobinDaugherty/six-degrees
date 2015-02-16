@@ -24,11 +24,11 @@ class TweetLoader
   private
 
   def tweet_for_tweet_line(tweet_line)
-    t = Tweet.new
-    t.message = tweet_line.message
-    t.user = User.find_or_create(tweet_line.user)
-    t.mentions = tweet_line.mentions.map { |m| User.find_or_create(m) }
-    t
+    Tweet.create(
+      message: tweet_line.message,
+      user: User.find_or_create(tweet_line.user),
+      mentions: tweet_line.mentions.map { |m| User.find_or_create(m) },
+    )
   end
 
   def tweet_lines
