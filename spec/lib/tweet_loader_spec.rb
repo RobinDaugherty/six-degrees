@@ -5,7 +5,7 @@ describe TweetLoader do
   let(:tweet_loader) { TweetLoader.new(filename) }
   let(:filename) { nil }
 
-  describe '#tweets' do
+  describe '#create_tweets' do
     before do
       allow(tweet_loader).to receive(:tweet_lines).and_return(tweet_lines)
       allow(tweet_loader).to receive(:tweet_for_tweet_line).and_return(*tweets)
@@ -24,7 +24,7 @@ describe TweetLoader do
         double('Tweet3'),
       ]
     }
-    subject { tweet_loader.tweets }
+    subject { tweet_loader.create_tweets }
     it 'returns the converted Tweets' do
       expect(subject).to eq(tweets)
     end
@@ -44,8 +44,8 @@ describe TweetLoader do
     end
   end
 
-  describe '#tweet_for_tweet_line' do
-    subject { tweet_loader.send(:tweet_for_tweet_line, tweet_line) }
+  describe '#create_tweet_for_tweet_line' do
+    subject { tweet_loader.send(:create_tweet_for_tweet_line, tweet_line) }
     let(:tweet_line) {
       instance_double('TweetLine', message: 'abc', user: 'a123', mentions: %w(b234 c567))
     }

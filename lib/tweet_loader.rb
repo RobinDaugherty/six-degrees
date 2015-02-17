@@ -15,15 +15,15 @@ class TweetLoader
     end
   end
 
-  def tweets
+  def create_tweets
     tweet_lines.map do |tweet_line|
-      tweet_for_tweet_line(tweet_line)
+      create_tweet_for_tweet_line(tweet_line)
     end
   end
 
   private
 
-  def tweet_for_tweet_line(tweet_line)
+  def create_tweet_for_tweet_line(tweet_line)
     Tweet.create(
       message: tweet_line.message,
       user: User.find_or_create(tweet_line.user),
