@@ -8,7 +8,7 @@ describe TweetLoader do
   describe '#create_tweets' do
     before do
       allow(tweet_loader).to receive(:tweet_lines).and_return(tweet_lines)
-      allow(tweet_loader).to receive(:tweet_for_tweet_line).and_return(*tweets)
+      allow(tweet_loader).to receive(:create_tweet_for_tweet_line).and_return(*tweets)
     end
     let(:tweet_lines) {
       [
