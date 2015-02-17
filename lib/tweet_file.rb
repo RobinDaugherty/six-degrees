@@ -1,4 +1,4 @@
-require 'tweet_line'
+require_relative 'tweet_line'
 
 class TweetFile
   attr_accessor :filename

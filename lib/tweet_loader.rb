@@ -1,4 +1,4 @@
-require 'tweet_file'
+require_relative 'tweet_file'
 require_relative '../models/tweet'
 require_relative '../models/user'
 
