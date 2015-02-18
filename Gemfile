@@ -7,3 +7,4 @@ gem 'rspec-collection_matchers'
 gem 'rspec-mocks'
 gem 'pry'
 gem 'pry-byebug'
+gem "codeclimate-test-reporter", group: :test, require: nil
