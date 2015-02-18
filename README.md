@@ -1,4 +1,6 @@
 [![Circle CI](https://circleci.com/gh/RobinDaugherty/six-degrees.svg?style=shield&svg)](https://circleci.com/gh/RobinDaugherty/six-degrees)
+[![Code Climate](https://codeclimate.com/github/RobinDaugherty/six-degrees/badges/gpa.svg)](https://codeclimate.com/github/RobinDaugherty/six-degrees)
+[![Test Coverage](https://codeclimate.com/github/RobinDaugherty/six-degrees/badges/coverage.svg)](https://codeclimate.com/github/RobinDaugherty/six-degrees)
 
 # six-degrees
 Implementation of [Six Degrees](http://www.puzzlenode.com/puzzles/14-six-degrees-of-separation) using Neo4J.
